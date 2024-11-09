@@ -1,0 +1,1 @@
+{"items": {"data": [{"id": "cash", "name": "現金", "value": 0.02922}, {"id": "stock", "name": "股票", "value": 0.97078}, {"id": "bond", "name": "債券", "value": 0}, {"id": "other", "name": "其他", "value": 0}], "portfolioDate": 1727625600}, "message": "成功", "statusCode": 200}

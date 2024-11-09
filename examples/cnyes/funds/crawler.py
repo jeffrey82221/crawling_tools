@@ -1,6 +1,7 @@
 """
 基金爬蟲
 """
+import json
 import time
 import requests
 from typing import Dict, Iterator
@@ -77,7 +78,6 @@ class MainCrawler:
             else:
                 break
             page_id += 1
-
 
 class NavCrawler:
     """
@@ -324,11 +324,27 @@ class IndustryCrawler:
         assert res.status_code == 200, f'status code should be 200 rather than {res.status_code}'
         return res.json()
 
+def dump_jsons(crawlers, cnyes_id: str):
+    for crawler in crawlers:
+        result = crawler.get_response(cnyes_id)
+        with open(f'jsons/{crawler.__class__.__name__}.json', 'w') as f:
+            f.write(json.dumps(result, ensure_ascii=False))
+
     
 if __name__ == '__main__':
     time.sleep(WAIT_TIME)
-    result = IndustryCrawler().get_response('B610022')
-    print(result)
+    dump_jsons(
+        [   
+            HoldingsCrawler,
+            RegionCrawler,
+            AssetsCrawler,
+            IndustryCrawler
+         ],
+         'B610022'
+    )
+    with open(f'jsons/nav.json', 'w') as f:
+        result = NavCrawler.get_response('B610022', 1)
+        f.write(json.dumps(result, ensure_ascii=False))
     for fund in MainCrawler().generate_rows():
         print(fund)
         id = fund['cnyesId']
