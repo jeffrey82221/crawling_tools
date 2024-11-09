@@ -3,12 +3,7 @@
 """
 import time
 import requests
-from bs4 import BeautifulSoup
-import pandas as pd
-from typing import Dict, List, Tuple, Iterator, Optional
-from io import StringIO
-import re
-import secrets
+from typing import Dict, Iterator
 
 
 WAIT_TIME = 0.0
