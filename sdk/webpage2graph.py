@@ -11,11 +11,10 @@
     - Response schema (JSON schema)
 3. Request Schema - (request section: header/payload)
     - Request schema (JSON schema)
-
-4. Response instance 
+4. Response instance （需點兩次才能有 schema/instance 之間的差別）
     - header instance 
     - body 
-5. Request instance
+5. Request instance （需點兩次才能有 schema/instance 之間的差別）
     - header instance 
     - payload
 
@@ -25,13 +24,17 @@
 2. EndPoint <- Request Schema
 3. Response Schema <- belong to - Response instance
 4. Request Schema <- belong to - Request instance
-5. Request instance - has_response -> Response instance
+5. Request Instance - has_response -> Response instance
 
 進一步拆解：
-1. JSON Request schema 展開
-2. JSON Response schema 展開
+1. JSON Request Schema 展開
+2. JSON Response Schema 展開
 3. JSON Request 內容展開
 4. JSON Response 內容展開
 5. HTML Response 提取出 結構化區域
 (https://www.researchgate.net/publication/332666543_Web_Page_Structured_Content_Detection_Using_Supervised_Machine_Learning)
+
+進一步關聯：
+1. 關鍵的 schema keys 可以連起來 (Schema <-> key <-> Schema) 類似 foreign key
+2. Instance 可以跟 schema 節點相連
 """
