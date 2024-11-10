@@ -1,222 +1,295 @@
 <?xml version='1.0' encoding='utf-8'?>
 <graphml xmlns="http://graphml.graphdrawing.org/xmlns" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://graphml.graphdrawing.org/xmlns http://graphml.graphdrawing.org/xmlns/1.0/graphml.xsd">
+  <key id="d1" for="node" attr.name="labels" attr.type="string" />
   <key id="d0" for="node" attr.name="label" attr.type="string" />
   <graph edgedefault="directed">
     <node id="0__statusCode">
       <data key="d0">statusCode</data>
+      <data key="d1">:JSON</data>
     </node>
     <node id="0__statusCode__200">
       <data key="d0">200</data>
+      <data key="d1">:JSON</data>
     </node>
     <node id="0__message">
       <data key="d0">message</data>
+      <data key="d1">:JSON</data>
     </node>
     <node id="0__message__成功">
       <data key="d0">成功</data>
+      <data key="d1">:JSON</data>
     </node>
     <node id="0__items">
       <data key="d0">items</data>
+      <data key="d1">:JSON</data>
     </node>
     <node id="0__items__current_page">
       <data key="d0">current_page</data>
+      <data key="d1">:JSON</data>
     </node>
     <node id="0__items__current_page__1">
       <data key="d0">1</data>
+      <data key="d1">:JSON</data>
     </node>
     <node id="0__items__data">
       <data key="d0">data</data>
+      <data key="d1">:JSON</data>
     </node>
     <node id="0__items__first_page_url">
       <data key="d0">first_page_url</data>
+      <data key="d1">:JSON</data>
     </node>
     <node id="0__items__first_page_url__/fund/api/v1/funds/B610022/nav?format=table&amp;page=1&amp;isVendor=0&amp;userFrom=anue">
       <data key="d0">/fund/api/v1/funds/B610022/nav?format=table&amp;page=1&amp;isVendor=0&amp;userFrom=anue</data>
+      <data key="d1">:JSON</data>
     </node>
     <node id="0__items__from">
       <data key="d0">from</data>
+      <data key="d1">:JSON</data>
     </node>
     <node id="0__items__from__1">
       <data key="d0">1</data>
+      <data key="d1">:JSON</data>
     </node>
     <node id="0__items__last_page">
       <data key="d0">last_page</data>
+      <data key="d1">:JSON</data>
     </node>
     <node id="0__items__last_page__68">
       <data key="d0">68</data>
+      <data key="d1">:JSON</data>
     </node>
     <node id="0__items__last_page_url">
       <data key="d0">last_page_url</data>
+      <data key="d1">:JSON</data>
     </node>
     <node id="0__items__last_page_url__/fund/api/v1/funds/B610022/nav?format=table&amp;page=68&amp;isVendor=0&amp;userFrom=anue">
       <data key="d0">/fund/api/v1/funds/B610022/nav?format=table&amp;page=68&amp;isVendor=0&amp;userFrom=anue</data>
+      <data key="d1">:JSON</data>
     </node>
     <node id="0__items__next_page_url">
       <data key="d0">next_page_url</data>
+      <data key="d1">:JSON</data>
     </node>
     <node id="0__items__next_page_url__/fund/api/v1/funds/B610022/nav?format=table&amp;page=2&amp;isVendor=0&amp;userFrom=anue">
       <data key="d0">/fund/api/v1/funds/B610022/nav?format=table&amp;page=2&amp;isVendor=0&amp;userFrom=anue</data>
+      <data key="d1">:JSON</data>
     </node>
     <node id="0__items__path">
       <data key="d0">path</data>
+      <data key="d1">:JSON</data>
     </node>
     <node id="0__items__path__/fund/api/v1/funds/B610022/nav">
       <data key="d0">/fund/api/v1/funds/B610022/nav</data>
+      <data key="d1">:JSON</data>
     </node>
     <node id="0__items__per_page">
       <data key="d0">per_page</data>
+      <data key="d1">:JSON</data>
     </node>
     <node id="0__items__per_page__10">
       <data key="d0">10</data>
+      <data key="d1">:JSON</data>
     </node>
     <node id="0__items__prev_page_url">
       <data key="d0">prev_page_url</data>
+      <data key="d1">:JSON</data>
     </node>
     <node id="0__items__prev_page_url__None">
       <data key="d0">None</data>
+      <data key="d1">:JSON</data>
     </node>
     <node id="0__items__to">
       <data key="d0">to</data>
+      <data key="d1">:JSON</data>
     </node>
     <node id="0__items__to__10">
       <data key="d0">10</data>
+      <data key="d1">:JSON</data>
     </node>
     <node id="0__items__total">
       <data key="d0">total</data>
+      <data key="d1">:JSON</data>
     </node>
     <node id="0__items__total__680">
       <data key="d0">680</data>
+      <data key="d1">:JSON</data>
     </node>
     <node id="0__items__data__tradeDate">
       <data key="d0">tradeDate</data>
+      <data key="d1">:JSON</data>
     </node>
     <node id="0__items__data__tradeDate__1729699200">
       <data key="d0">1729699200</data>
+      <data key="d1">:JSON</data>
     </node>
     <node id="0__items__data__nav">
       <data key="d0">nav</data>
+      <data key="d1">:JSON</data>
     </node>
     <node id="0__items__data__nav__11.8403">
       <data key="d0">11.8403</data>
+      <data key="d1">:JSON</data>
     </node>
     <node id="0__items__data__change">
       <data key="d0">change</data>
+      <data key="d1">:JSON</data>
     </node>
     <node id="0__items__data__change__0.0049">
       <data key="d0">0.0049</data>
+      <data key="d1">:JSON</data>
     </node>
     <node id="0__items__data__changePercent">
       <data key="d0">changePercent</data>
+      <data key="d1">:JSON</data>
     </node>
     <node id="0__items__data__changePercent__0.0414">
       <data key="d0">0.0414</data>
+      <data key="d1">:JSON</data>
     </node>
     <node id="0__items__data__tradeDate__1729785600">
       <data key="d0">1729785600</data>
+      <data key="d1">:JSON</data>
     </node>
     <node id="0__items__data__nav__11.6635">
       <data key="d0">11.6635</data>
+      <data key="d1">:JSON</data>
     </node>
     <node id="0__items__data__change__-0.1768">
       <data key="d0">-0.1768</data>
+      <data key="d1">:JSON</data>
     </node>
     <node id="0__items__data__changePercent__-1.49321">
       <data key="d0">-1.49321</data>
+      <data key="d1">:JSON</data>
     </node>
     <node id="0__items__data__tradeDate__1730131200">
       <data key="d0">1730131200</data>
+      <data key="d1">:JSON</data>
     </node>
     <node id="0__items__data__nav__11.9912">
       <data key="d0">11.9912</data>
+      <data key="d1">:JSON</data>
     </node>
     <node id="0__items__data__change__0.3277">
       <data key="d0">0.3277</data>
+      <data key="d1">:JSON</data>
     </node>
     <node id="0__items__data__changePercent__2.80962">
       <data key="d0">2.80962</data>
+      <data key="d1">:JSON</data>
     </node>
     <node id="0__items__data__tradeDate__1730217600">
       <data key="d0">1730217600</data>
+      <data key="d1">:JSON</data>
     </node>
     <node id="0__items__data__nav__12.0148">
       <data key="d0">12.0148</data>
+      <data key="d1">:JSON</data>
     </node>
     <node id="0__items__data__change__0.0236">
       <data key="d0">0.0236</data>
+      <data key="d1">:JSON</data>
     </node>
     <node id="0__items__data__changePercent__0.19681">
       <data key="d0">0.19681</data>
+      <data key="d1">:JSON</data>
     </node>
     <node id="0__items__data__tradeDate__1730304000">
       <data key="d0">1730304000</data>
+      <data key="d1">:JSON</data>
     </node>
     <node id="0__items__data__nav__12.0482">
       <data key="d0">12.0482</data>
+      <data key="d1">:JSON</data>
     </node>
     <node id="0__items__data__change__0.0334">
       <data key="d0">0.0334</data>
+      <data key="d1">:JSON</data>
     </node>
     <node id="0__items__data__changePercent__0.27799">
       <data key="d0">0.27799</data>
+      <data key="d1">:JSON</data>
     </node>
     <node id="0__items__data__tradeDate__1730390400">
       <data key="d0">1730390400</data>
+      <data key="d1">:JSON</data>
     </node>
     <node id="0__items__data__nav__11.762">
       <data key="d0">11.762</data>
+      <data key="d1">:JSON</data>
     </node>
     <node id="0__items__data__change__-0.2862">
       <data key="d0">-0.2862</data>
+      <data key="d1">:JSON</data>
     </node>
     <node id="0__items__data__changePercent__-2.37546">
       <data key="d0">-2.37546</data>
+      <data key="d1">:JSON</data>
     </node>
     <node id="0__items__data__tradeDate__1730736000">
       <data key="d0">1730736000</data>
+      <data key="d1">:JSON</data>
     </node>
     <node id="0__items__data__nav__11.9074">
       <data key="d0">11.9074</data>
+      <data key="d1">:JSON</data>
     </node>
     <node id="0__items__data__change__0.1454">
       <data key="d0">0.1454</data>
+      <data key="d1">:JSON</data>
     </node>
     <node id="0__items__data__changePercent__1.23618">
       <data key="d0">1.23618</data>
+      <data key="d1">:JSON</data>
     </node>
     <node id="0__items__data__tradeDate__1730822400">
       <data key="d0">1730822400</data>
+      <data key="d1">:JSON</data>
     </node>
     <node id="0__items__data__nav__11.9841">
       <data key="d0">11.9841</data>
+      <data key="d1">:JSON</data>
     </node>
     <node id="0__items__data__change__0.0767">
       <data key="d0">0.0767</data>
+      <data key="d1">:JSON</data>
     </node>
     <node id="0__items__data__changePercent__0.64414">
       <data key="d0">0.64414</data>
+      <data key="d1">:JSON</data>
     </node>
     <node id="0__items__data__tradeDate__1730908800">
       <data key="d0">1730908800</data>
+      <data key="d1">:JSON</data>
     </node>
     <node id="0__items__data__nav__12.0234">
       <data key="d0">12.0234</data>
+      <data key="d1">:JSON</data>
     </node>
     <node id="0__items__data__change__0.0393">
       <data key="d0">0.0393</data>
+      <data key="d1">:JSON</data>
     </node>
     <node id="0__items__data__changePercent__0.32793">
       <data key="d0">0.32793</data>
+      <data key="d1">:JSON</data>
     </node>
     <node id="0__items__data__tradeDate__1730995200">
       <data key="d0">1730995200</data>
+      <data key="d1">:JSON</data>
     </node>
     <node id="0__items__data__nav__12.1515">
       <data key="d0">12.1515</data>
+      <data key="d1">:JSON</data>
     </node>
     <node id="0__items__data__change__0.1281">
       <data key="d0">0.1281</data>
+      <data key="d1">:JSON</data>
     </node>
     <node id="0__items__data__changePercent__1.06542">
       <data key="d0">1.06542</data>
+      <data key="d1">:JSON</data>
     </node>
     <edge source="0__statusCode" target="0__statusCode__200" id="0" />
     <edge source="0__message" target="0__message__成功" id="0" />

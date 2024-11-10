@@ -11,6 +11,7 @@ def rm_visual_info(G: nx.Graph) -> nx.Graph:
     node_link_data['graph'] = {}
     for node in node_link_data['nodes']:
         for key in ['fontname', 'fontsize', 'margin', 'fillcolor', 'penwidth', 'style', 'shape']:
+            node['labels'] = ':JSON'
             del node[key]
     for link in node_link_data['edges']:
         for key in ['arrowhead', 'penwidth']:
