@@ -1,1 +1,5 @@
-{"items": {"data": [{"name": "科技", "id": "Technology", "value": 26.78624}, {"name": "工業", "id": "Industrials", "value": 13.84497}, {"name": "金融服務", "id": "Financial Services", "value": 12.78377}, {"name": "防守性消費", "id": "Consumer Defensive", "value": 11.68057}, {"name": "基本物料", "id": "Basic Materials", "value": 11.67911}, {"name": "周期性消費", "id": "Consumer Cyclical", "value": 11.44669}, {"name": "健康護理", "id": "Healthcare", "value": 8.85698}, {"name": "電訊服務", "id": "Communication Services", "value": 2.45366}], "portfolioDate": 1727625600}, "message": "成功", "statusCode": 200}
+{
+    "name": "科技",
+    "id": "Technology",
+    "value": 26.78624
+}
