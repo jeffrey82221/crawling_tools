@@ -27,14 +27,17 @@
 5. Request Instance - has_response -> Response instance
 
 進一步拆解：
-1. JSON Request Schema 展開
-2. JSON Response Schema 展開
-3. JSON Request 內容展開
-4. JSON Response 內容展開
+1. JSON Request Schema 展開 -> JSONEntries 節點
+2. JSON Response Schema 展開 -> JSONEntries 節點
+3. JSON Request 內容展開 -> JSONEntity 節點
+4. JSON Response 內容展開 -> JSONEntity 節點
 5. HTML Response 提取出 結構化區域
 (https://www.researchgate.net/publication/332666543_Web_Page_Structured_Content_Detection_Using_Supervised_Machine_Learning)
+6. Endpoint URL 展開 -> EndPointEntries
 
 進一步關聯：
 1. 關鍵的 schema keys 可以連起來 (Schema <-> key <-> Schema) 類似 foreign key
+(此為推論類型的連線，應該要能夠有足夠的彈性去調整）
+
 2. Instance 可以跟 schema 節點相連
 """

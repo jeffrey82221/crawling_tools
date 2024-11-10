@@ -1,3 +1,13 @@
+"""
+TODO:
+- [ ] 相同層次的資訊必續建立橫向關聯 
+    - HOW?
+        - [ ] Json裡面的 List 要改成 Dict，並且以 item order 為 key!
+- [ ] 納入 root 節點
+    - HOW?
+        - [ ] 整個資料放到 root 底下： {"root": original_json)
+        - [ ] Cypher 把 root 特別標上標籤 :ROOT
+"""
 from yaml2dot import data_loader
 from yaml2dot.renderer import render
 import networkx as nx
