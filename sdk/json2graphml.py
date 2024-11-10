@@ -19,7 +19,7 @@ def rm_visual_info(G: nx.Graph) -> nx.Graph:
     return nx.node_link_graph(node_link_data, edges="edges")
 
 # Load YAML or JSON data from a file
-data = data_loader.load_yaml_or_json('../examples/cnyes/funds/jsons/nav.json')
+data = data_loader.load_yaml_or_json('../examples/cnyes/funds/jsons/HoldingsCrawler.json')
 G = render(data)
 G = rm_visual_info(G)
 buff = io.StringIO()
