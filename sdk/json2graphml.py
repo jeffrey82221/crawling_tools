@@ -1,12 +1,20 @@
 """
 TODO:
+- [ ] Goal : 在 同一個 dictionary 裡面的 keys 要建立橫向連結
+    - [ ] 可以讓 List of Diction 裡面的 values 彼此連結
+    - [ ] 可以讓 最上層的 values 被綁在一起，類似root的概念
 - [ ] 相同層次的資訊必續建立橫向關聯 
     - HOW?
-        - [ ] Json裡面的 List 要改成 Dict，並且以 item order 為 key!
+        - [ ] Json裡面的 List 要改成 Dict，並且以 ListItem_0/1/... 為 key!
+        - [ ] Cypher 後修：
+            - [ ] Step1: Cypher 最後找到所有 ListItem0/1...的節點，
+            - [ ] Step2: 用 Cypher 把其中相同 key 的 values 互相連結
+            - [ ] Step3: 用 Cypher 移除 ListItem0/1/... ，然後把下面相同的key 合併到一起，往上面接
 - [ ] 納入 root 節點
     - HOW?
         - [ ] 整個資料放到 root 底下： {"root": original_json)
         - [ ] Cypher 把 root 特別標上標籤 :ROOT
+    
 """
 from yaml2dot import data_loader
 from yaml2dot.renderer import render
