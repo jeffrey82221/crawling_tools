@@ -115,180 +115,364 @@
       <data key="d0">680</data>
       <data key="d1">:JSON</data>
     </node>
-    <node id="0__items__data__tradeDate">
+    <node id="0__items__data__0">
+      <data key="d0">0</data>
+      <data key="d1">:JSON</data>
+    </node>
+    <node id="0__items__data__1">
+      <data key="d0">1</data>
+      <data key="d1">:JSON</data>
+    </node>
+    <node id="0__items__data__2">
+      <data key="d0">2</data>
+      <data key="d1">:JSON</data>
+    </node>
+    <node id="0__items__data__3">
+      <data key="d0">3</data>
+      <data key="d1">:JSON</data>
+    </node>
+    <node id="0__items__data__4">
+      <data key="d0">4</data>
+      <data key="d1">:JSON</data>
+    </node>
+    <node id="0__items__data__5">
+      <data key="d0">5</data>
+      <data key="d1">:JSON</data>
+    </node>
+    <node id="0__items__data__6">
+      <data key="d0">6</data>
+      <data key="d1">:JSON</data>
+    </node>
+    <node id="0__items__data__7">
+      <data key="d0">7</data>
+      <data key="d1">:JSON</data>
+    </node>
+    <node id="0__items__data__8">
+      <data key="d0">8</data>
+      <data key="d1">:JSON</data>
+    </node>
+    <node id="0__items__data__9">
+      <data key="d0">9</data>
+      <data key="d1">:JSON</data>
+    </node>
+    <node id="0__items__data__0__tradeDate">
       <data key="d0">tradeDate</data>
       <data key="d1">:JSON</data>
     </node>
-    <node id="0__items__data__tradeDate__1729699200">
-      <data key="d0">1729699200</data>
-      <data key="d1">:JSON</data>
-    </node>
-    <node id="0__items__data__nav">
-      <data key="d0">nav</data>
-      <data key="d1">:JSON</data>
-    </node>
-    <node id="0__items__data__nav__11.8403">
-      <data key="d0">11.8403</data>
-      <data key="d1">:JSON</data>
-    </node>
-    <node id="0__items__data__change">
-      <data key="d0">change</data>
-      <data key="d1">:JSON</data>
-    </node>
-    <node id="0__items__data__change__0.0049">
-      <data key="d0">0.0049</data>
-      <data key="d1">:JSON</data>
-    </node>
-    <node id="0__items__data__changePercent">
-      <data key="d0">changePercent</data>
-      <data key="d1">:JSON</data>
-    </node>
-    <node id="0__items__data__changePercent__0.0414">
-      <data key="d0">0.0414</data>
-      <data key="d1">:JSON</data>
-    </node>
-    <node id="0__items__data__tradeDate__1729785600">
-      <data key="d0">1729785600</data>
-      <data key="d1">:JSON</data>
-    </node>
-    <node id="0__items__data__nav__11.6635">
-      <data key="d0">11.6635</data>
-      <data key="d1">:JSON</data>
-    </node>
-    <node id="0__items__data__change__-0.1768">
-      <data key="d0">-0.1768</data>
-      <data key="d1">:JSON</data>
-    </node>
-    <node id="0__items__data__changePercent__-1.49321">
-      <data key="d0">-1.49321</data>
-      <data key="d1">:JSON</data>
-    </node>
-    <node id="0__items__data__tradeDate__1730131200">
-      <data key="d0">1730131200</data>
-      <data key="d1">:JSON</data>
-    </node>
-    <node id="0__items__data__nav__11.9912">
-      <data key="d0">11.9912</data>
-      <data key="d1">:JSON</data>
-    </node>
-    <node id="0__items__data__change__0.3277">
-      <data key="d0">0.3277</data>
-      <data key="d1">:JSON</data>
-    </node>
-    <node id="0__items__data__changePercent__2.80962">
-      <data key="d0">2.80962</data>
-      <data key="d1">:JSON</data>
-    </node>
-    <node id="0__items__data__tradeDate__1730217600">
-      <data key="d0">1730217600</data>
-      <data key="d1">:JSON</data>
-    </node>
-    <node id="0__items__data__nav__12.0148">
-      <data key="d0">12.0148</data>
-      <data key="d1">:JSON</data>
-    </node>
-    <node id="0__items__data__change__0.0236">
-      <data key="d0">0.0236</data>
-      <data key="d1">:JSON</data>
-    </node>
-    <node id="0__items__data__changePercent__0.19681">
-      <data key="d0">0.19681</data>
-      <data key="d1">:JSON</data>
-    </node>
-    <node id="0__items__data__tradeDate__1730304000">
-      <data key="d0">1730304000</data>
-      <data key="d1">:JSON</data>
-    </node>
-    <node id="0__items__data__nav__12.0482">
-      <data key="d0">12.0482</data>
-      <data key="d1">:JSON</data>
-    </node>
-    <node id="0__items__data__change__0.0334">
-      <data key="d0">0.0334</data>
-      <data key="d1">:JSON</data>
-    </node>
-    <node id="0__items__data__changePercent__0.27799">
-      <data key="d0">0.27799</data>
-      <data key="d1">:JSON</data>
-    </node>
-    <node id="0__items__data__tradeDate__1730390400">
-      <data key="d0">1730390400</data>
-      <data key="d1">:JSON</data>
-    </node>
-    <node id="0__items__data__nav__11.762">
-      <data key="d0">11.762</data>
-      <data key="d1">:JSON</data>
-    </node>
-    <node id="0__items__data__change__-0.2862">
-      <data key="d0">-0.2862</data>
-      <data key="d1">:JSON</data>
-    </node>
-    <node id="0__items__data__changePercent__-2.37546">
-      <data key="d0">-2.37546</data>
-      <data key="d1">:JSON</data>
-    </node>
-    <node id="0__items__data__tradeDate__1730736000">
-      <data key="d0">1730736000</data>
-      <data key="d1">:JSON</data>
-    </node>
-    <node id="0__items__data__nav__11.9074">
-      <data key="d0">11.9074</data>
-      <data key="d1">:JSON</data>
-    </node>
-    <node id="0__items__data__change__0.1454">
-      <data key="d0">0.1454</data>
-      <data key="d1">:JSON</data>
-    </node>
-    <node id="0__items__data__changePercent__1.23618">
-      <data key="d0">1.23618</data>
-      <data key="d1">:JSON</data>
-    </node>
-    <node id="0__items__data__tradeDate__1730822400">
-      <data key="d0">1730822400</data>
-      <data key="d1">:JSON</data>
-    </node>
-    <node id="0__items__data__nav__11.9841">
-      <data key="d0">11.9841</data>
-      <data key="d1">:JSON</data>
-    </node>
-    <node id="0__items__data__change__0.0767">
-      <data key="d0">0.0767</data>
-      <data key="d1">:JSON</data>
-    </node>
-    <node id="0__items__data__changePercent__0.64414">
-      <data key="d0">0.64414</data>
-      <data key="d1">:JSON</data>
-    </node>
-    <node id="0__items__data__tradeDate__1730908800">
-      <data key="d0">1730908800</data>
-      <data key="d1">:JSON</data>
-    </node>
-    <node id="0__items__data__nav__12.0234">
-      <data key="d0">12.0234</data>
-      <data key="d1">:JSON</data>
-    </node>
-    <node id="0__items__data__change__0.0393">
-      <data key="d0">0.0393</data>
-      <data key="d1">:JSON</data>
-    </node>
-    <node id="0__items__data__changePercent__0.32793">
-      <data key="d0">0.32793</data>
-      <data key="d1">:JSON</data>
-    </node>
-    <node id="0__items__data__tradeDate__1730995200">
+    <node id="0__items__data__0__tradeDate__1730995200">
       <data key="d0">1730995200</data>
       <data key="d1">:JSON</data>
     </node>
-    <node id="0__items__data__nav__12.1515">
+    <node id="0__items__data__0__nav">
+      <data key="d0">nav</data>
+      <data key="d1">:JSON</data>
+    </node>
+    <node id="0__items__data__0__nav__12.1515">
       <data key="d0">12.1515</data>
       <data key="d1">:JSON</data>
     </node>
-    <node id="0__items__data__change__0.1281">
+    <node id="0__items__data__0__change">
+      <data key="d0">change</data>
+      <data key="d1">:JSON</data>
+    </node>
+    <node id="0__items__data__0__change__0.1281">
       <data key="d0">0.1281</data>
       <data key="d1">:JSON</data>
     </node>
-    <node id="0__items__data__changePercent__1.06542">
+    <node id="0__items__data__0__changePercent">
+      <data key="d0">changePercent</data>
+      <data key="d1">:JSON</data>
+    </node>
+    <node id="0__items__data__0__changePercent__1.06542">
       <data key="d0">1.06542</data>
+      <data key="d1">:JSON</data>
+    </node>
+    <node id="0__items__data__1__tradeDate">
+      <data key="d0">tradeDate</data>
+      <data key="d1">:JSON</data>
+    </node>
+    <node id="0__items__data__1__tradeDate__1730908800">
+      <data key="d0">1730908800</data>
+      <data key="d1">:JSON</data>
+    </node>
+    <node id="0__items__data__1__nav">
+      <data key="d0">nav</data>
+      <data key="d1">:JSON</data>
+    </node>
+    <node id="0__items__data__1__nav__12.0234">
+      <data key="d0">12.0234</data>
+      <data key="d1">:JSON</data>
+    </node>
+    <node id="0__items__data__1__change">
+      <data key="d0">change</data>
+      <data key="d1">:JSON</data>
+    </node>
+    <node id="0__items__data__1__change__0.0393">
+      <data key="d0">0.0393</data>
+      <data key="d1">:JSON</data>
+    </node>
+    <node id="0__items__data__1__changePercent">
+      <data key="d0">changePercent</data>
+      <data key="d1">:JSON</data>
+    </node>
+    <node id="0__items__data__1__changePercent__0.32793">
+      <data key="d0">0.32793</data>
+      <data key="d1">:JSON</data>
+    </node>
+    <node id="0__items__data__2__tradeDate">
+      <data key="d0">tradeDate</data>
+      <data key="d1">:JSON</data>
+    </node>
+    <node id="0__items__data__2__tradeDate__1730822400">
+      <data key="d0">1730822400</data>
+      <data key="d1">:JSON</data>
+    </node>
+    <node id="0__items__data__2__nav">
+      <data key="d0">nav</data>
+      <data key="d1">:JSON</data>
+    </node>
+    <node id="0__items__data__2__nav__11.9841">
+      <data key="d0">11.9841</data>
+      <data key="d1">:JSON</data>
+    </node>
+    <node id="0__items__data__2__change">
+      <data key="d0">change</data>
+      <data key="d1">:JSON</data>
+    </node>
+    <node id="0__items__data__2__change__0.0767">
+      <data key="d0">0.0767</data>
+      <data key="d1">:JSON</data>
+    </node>
+    <node id="0__items__data__2__changePercent">
+      <data key="d0">changePercent</data>
+      <data key="d1">:JSON</data>
+    </node>
+    <node id="0__items__data__2__changePercent__0.64414">
+      <data key="d0">0.64414</data>
+      <data key="d1">:JSON</data>
+    </node>
+    <node id="0__items__data__3__tradeDate">
+      <data key="d0">tradeDate</data>
+      <data key="d1">:JSON</data>
+    </node>
+    <node id="0__items__data__3__tradeDate__1730736000">
+      <data key="d0">1730736000</data>
+      <data key="d1">:JSON</data>
+    </node>
+    <node id="0__items__data__3__nav">
+      <data key="d0">nav</data>
+      <data key="d1">:JSON</data>
+    </node>
+    <node id="0__items__data__3__nav__11.9074">
+      <data key="d0">11.9074</data>
+      <data key="d1">:JSON</data>
+    </node>
+    <node id="0__items__data__3__change">
+      <data key="d0">change</data>
+      <data key="d1">:JSON</data>
+    </node>
+    <node id="0__items__data__3__change__0.1454">
+      <data key="d0">0.1454</data>
+      <data key="d1">:JSON</data>
+    </node>
+    <node id="0__items__data__3__changePercent">
+      <data key="d0">changePercent</data>
+      <data key="d1">:JSON</data>
+    </node>
+    <node id="0__items__data__3__changePercent__1.23618">
+      <data key="d0">1.23618</data>
+      <data key="d1">:JSON</data>
+    </node>
+    <node id="0__items__data__4__tradeDate">
+      <data key="d0">tradeDate</data>
+      <data key="d1">:JSON</data>
+    </node>
+    <node id="0__items__data__4__tradeDate__1730390400">
+      <data key="d0">1730390400</data>
+      <data key="d1">:JSON</data>
+    </node>
+    <node id="0__items__data__4__nav">
+      <data key="d0">nav</data>
+      <data key="d1">:JSON</data>
+    </node>
+    <node id="0__items__data__4__nav__11.762">
+      <data key="d0">11.762</data>
+      <data key="d1">:JSON</data>
+    </node>
+    <node id="0__items__data__4__change">
+      <data key="d0">change</data>
+      <data key="d1">:JSON</data>
+    </node>
+    <node id="0__items__data__4__change__-0.2862">
+      <data key="d0">-0.2862</data>
+      <data key="d1">:JSON</data>
+    </node>
+    <node id="0__items__data__4__changePercent">
+      <data key="d0">changePercent</data>
+      <data key="d1">:JSON</data>
+    </node>
+    <node id="0__items__data__4__changePercent__-2.37546">
+      <data key="d0">-2.37546</data>
+      <data key="d1">:JSON</data>
+    </node>
+    <node id="0__items__data__5__tradeDate">
+      <data key="d0">tradeDate</data>
+      <data key="d1">:JSON</data>
+    </node>
+    <node id="0__items__data__5__tradeDate__1730304000">
+      <data key="d0">1730304000</data>
+      <data key="d1">:JSON</data>
+    </node>
+    <node id="0__items__data__5__nav">
+      <data key="d0">nav</data>
+      <data key="d1">:JSON</data>
+    </node>
+    <node id="0__items__data__5__nav__12.0482">
+      <data key="d0">12.0482</data>
+      <data key="d1">:JSON</data>
+    </node>
+    <node id="0__items__data__5__change">
+      <data key="d0">change</data>
+      <data key="d1">:JSON</data>
+    </node>
+    <node id="0__items__data__5__change__0.0334">
+      <data key="d0">0.0334</data>
+      <data key="d1">:JSON</data>
+    </node>
+    <node id="0__items__data__5__changePercent">
+      <data key="d0">changePercent</data>
+      <data key="d1">:JSON</data>
+    </node>
+    <node id="0__items__data__5__changePercent__0.27799">
+      <data key="d0">0.27799</data>
+      <data key="d1">:JSON</data>
+    </node>
+    <node id="0__items__data__6__tradeDate">
+      <data key="d0">tradeDate</data>
+      <data key="d1">:JSON</data>
+    </node>
+    <node id="0__items__data__6__tradeDate__1730217600">
+      <data key="d0">1730217600</data>
+      <data key="d1">:JSON</data>
+    </node>
+    <node id="0__items__data__6__nav">
+      <data key="d0">nav</data>
+      <data key="d1">:JSON</data>
+    </node>
+    <node id="0__items__data__6__nav__12.0148">
+      <data key="d0">12.0148</data>
+      <data key="d1">:JSON</data>
+    </node>
+    <node id="0__items__data__6__change">
+      <data key="d0">change</data>
+      <data key="d1">:JSON</data>
+    </node>
+    <node id="0__items__data__6__change__0.0236">
+      <data key="d0">0.0236</data>
+      <data key="d1">:JSON</data>
+    </node>
+    <node id="0__items__data__6__changePercent">
+      <data key="d0">changePercent</data>
+      <data key="d1">:JSON</data>
+    </node>
+    <node id="0__items__data__6__changePercent__0.19681">
+      <data key="d0">0.19681</data>
+      <data key="d1">:JSON</data>
+    </node>
+    <node id="0__items__data__7__tradeDate">
+      <data key="d0">tradeDate</data>
+      <data key="d1">:JSON</data>
+    </node>
+    <node id="0__items__data__7__tradeDate__1730131200">
+      <data key="d0">1730131200</data>
+      <data key="d1">:JSON</data>
+    </node>
+    <node id="0__items__data__7__nav">
+      <data key="d0">nav</data>
+      <data key="d1">:JSON</data>
+    </node>
+    <node id="0__items__data__7__nav__11.9912">
+      <data key="d0">11.9912</data>
+      <data key="d1">:JSON</data>
+    </node>
+    <node id="0__items__data__7__change">
+      <data key="d0">change</data>
+      <data key="d1">:JSON</data>
+    </node>
+    <node id="0__items__data__7__change__0.3277">
+      <data key="d0">0.3277</data>
+      <data key="d1">:JSON</data>
+    </node>
+    <node id="0__items__data__7__changePercent">
+      <data key="d0">changePercent</data>
+      <data key="d1">:JSON</data>
+    </node>
+    <node id="0__items__data__7__changePercent__2.80962">
+      <data key="d0">2.80962</data>
+      <data key="d1">:JSON</data>
+    </node>
+    <node id="0__items__data__8__tradeDate">
+      <data key="d0">tradeDate</data>
+      <data key="d1">:JSON</data>
+    </node>
+    <node id="0__items__data__8__tradeDate__1729785600">
+      <data key="d0">1729785600</data>
+      <data key="d1">:JSON</data>
+    </node>
+    <node id="0__items__data__8__nav">
+      <data key="d0">nav</data>
+      <data key="d1">:JSON</data>
+    </node>
+    <node id="0__items__data__8__nav__11.6635">
+      <data key="d0">11.6635</data>
+      <data key="d1">:JSON</data>
+    </node>
+    <node id="0__items__data__8__change">
+      <data key="d0">change</data>
+      <data key="d1">:JSON</data>
+    </node>
+    <node id="0__items__data__8__change__-0.1768">
+      <data key="d0">-0.1768</data>
+      <data key="d1">:JSON</data>
+    </node>
+    <node id="0__items__data__8__changePercent">
+      <data key="d0">changePercent</data>
+      <data key="d1">:JSON</data>
+    </node>
+    <node id="0__items__data__8__changePercent__-1.49321">
+      <data key="d0">-1.49321</data>
+      <data key="d1">:JSON</data>
+    </node>
+    <node id="0__items__data__9__tradeDate">
+      <data key="d0">tradeDate</data>
+      <data key="d1">:JSON</data>
+    </node>
+    <node id="0__items__data__9__tradeDate__1729699200">
+      <data key="d0">1729699200</data>
+      <data key="d1">:JSON</data>
+    </node>
+    <node id="0__items__data__9__nav">
+      <data key="d0">nav</data>
+      <data key="d1">:JSON</data>
+    </node>
+    <node id="0__items__data__9__nav__11.8403">
+      <data key="d0">11.8403</data>
+      <data key="d1">:JSON</data>
+    </node>
+    <node id="0__items__data__9__change">
+      <data key="d0">change</data>
+      <data key="d1">:JSON</data>
+    </node>
+    <node id="0__items__data__9__change__0.0049">
+      <data key="d0">0.0049</data>
+      <data key="d1">:JSON</data>
+    </node>
+    <node id="0__items__data__9__changePercent">
+      <data key="d0">changePercent</data>
+      <data key="d1">:JSON</data>
+    </node>
+    <node id="0__items__data__9__changePercent__0.0414">
+      <data key="d0">0.0414</data>
       <data key="d1">:JSON</data>
     </node>
     <edge source="0__statusCode" target="0__statusCode__200" id="0" />
@@ -306,10 +490,16 @@
     <edge source="0__items" target="0__items__to" id="0" />
     <edge source="0__items" target="0__items__total" id="0" />
     <edge source="0__items__current_page" target="0__items__current_page__1" id="0" />
-    <edge source="0__items__data" target="0__items__data__tradeDate" id="0" />
-    <edge source="0__items__data" target="0__items__data__nav" id="0" />
-    <edge source="0__items__data" target="0__items__data__change" id="0" />
-    <edge source="0__items__data" target="0__items__data__changePercent" id="0" />
+    <edge source="0__items__data" target="0__items__data__0" id="0" />
+    <edge source="0__items__data" target="0__items__data__1" id="0" />
+    <edge source="0__items__data" target="0__items__data__2" id="0" />
+    <edge source="0__items__data" target="0__items__data__3" id="0" />
+    <edge source="0__items__data" target="0__items__data__4" id="0" />
+    <edge source="0__items__data" target="0__items__data__5" id="0" />
+    <edge source="0__items__data" target="0__items__data__6" id="0" />
+    <edge source="0__items__data" target="0__items__data__7" id="0" />
+    <edge source="0__items__data" target="0__items__data__8" id="0" />
+    <edge source="0__items__data" target="0__items__data__9" id="0" />
     <edge source="0__items__first_page_url" target="0__items__first_page_url__/fund/api/v1/funds/B610022/nav?format=table&amp;page=1&amp;isVendor=0&amp;userFrom=anue" id="0" />
     <edge source="0__items__from" target="0__items__from__1" id="0" />
     <edge source="0__items__last_page" target="0__items__last_page__68" id="0" />
@@ -320,45 +510,85 @@
     <edge source="0__items__prev_page_url" target="0__items__prev_page_url__None" id="0" />
     <edge source="0__items__to" target="0__items__to__10" id="0" />
     <edge source="0__items__total" target="0__items__total__680" id="0" />
-    <edge source="0__items__data__tradeDate" target="0__items__data__tradeDate__1729699200" id="0" />
-    <edge source="0__items__data__tradeDate" target="0__items__data__tradeDate__1729785600" id="0" />
-    <edge source="0__items__data__tradeDate" target="0__items__data__tradeDate__1730131200" id="0" />
-    <edge source="0__items__data__tradeDate" target="0__items__data__tradeDate__1730217600" id="0" />
-    <edge source="0__items__data__tradeDate" target="0__items__data__tradeDate__1730304000" id="0" />
-    <edge source="0__items__data__tradeDate" target="0__items__data__tradeDate__1730390400" id="0" />
-    <edge source="0__items__data__tradeDate" target="0__items__data__tradeDate__1730736000" id="0" />
-    <edge source="0__items__data__tradeDate" target="0__items__data__tradeDate__1730822400" id="0" />
-    <edge source="0__items__data__tradeDate" target="0__items__data__tradeDate__1730908800" id="0" />
-    <edge source="0__items__data__tradeDate" target="0__items__data__tradeDate__1730995200" id="0" />
-    <edge source="0__items__data__nav" target="0__items__data__nav__11.8403" id="0" />
-    <edge source="0__items__data__nav" target="0__items__data__nav__11.6635" id="0" />
-    <edge source="0__items__data__nav" target="0__items__data__nav__11.9912" id="0" />
-    <edge source="0__items__data__nav" target="0__items__data__nav__12.0148" id="0" />
-    <edge source="0__items__data__nav" target="0__items__data__nav__12.0482" id="0" />
-    <edge source="0__items__data__nav" target="0__items__data__nav__11.762" id="0" />
-    <edge source="0__items__data__nav" target="0__items__data__nav__11.9074" id="0" />
-    <edge source="0__items__data__nav" target="0__items__data__nav__11.9841" id="0" />
-    <edge source="0__items__data__nav" target="0__items__data__nav__12.0234" id="0" />
-    <edge source="0__items__data__nav" target="0__items__data__nav__12.1515" id="0" />
-    <edge source="0__items__data__change" target="0__items__data__change__0.0049" id="0" />
-    <edge source="0__items__data__change" target="0__items__data__change__-0.1768" id="0" />
-    <edge source="0__items__data__change" target="0__items__data__change__0.3277" id="0" />
-    <edge source="0__items__data__change" target="0__items__data__change__0.0236" id="0" />
-    <edge source="0__items__data__change" target="0__items__data__change__0.0334" id="0" />
-    <edge source="0__items__data__change" target="0__items__data__change__-0.2862" id="0" />
-    <edge source="0__items__data__change" target="0__items__data__change__0.1454" id="0" />
-    <edge source="0__items__data__change" target="0__items__data__change__0.0767" id="0" />
-    <edge source="0__items__data__change" target="0__items__data__change__0.0393" id="0" />
-    <edge source="0__items__data__change" target="0__items__data__change__0.1281" id="0" />
-    <edge source="0__items__data__changePercent" target="0__items__data__changePercent__0.0414" id="0" />
-    <edge source="0__items__data__changePercent" target="0__items__data__changePercent__-1.49321" id="0" />
-    <edge source="0__items__data__changePercent" target="0__items__data__changePercent__2.80962" id="0" />
-    <edge source="0__items__data__changePercent" target="0__items__data__changePercent__0.19681" id="0" />
-    <edge source="0__items__data__changePercent" target="0__items__data__changePercent__0.27799" id="0" />
-    <edge source="0__items__data__changePercent" target="0__items__data__changePercent__-2.37546" id="0" />
-    <edge source="0__items__data__changePercent" target="0__items__data__changePercent__1.23618" id="0" />
-    <edge source="0__items__data__changePercent" target="0__items__data__changePercent__0.64414" id="0" />
-    <edge source="0__items__data__changePercent" target="0__items__data__changePercent__0.32793" id="0" />
-    <edge source="0__items__data__changePercent" target="0__items__data__changePercent__1.06542" id="0" />
+    <edge source="0__items__data__0" target="0__items__data__0__tradeDate" id="0" />
+    <edge source="0__items__data__0" target="0__items__data__0__nav" id="0" />
+    <edge source="0__items__data__0" target="0__items__data__0__change" id="0" />
+    <edge source="0__items__data__0" target="0__items__data__0__changePercent" id="0" />
+    <edge source="0__items__data__1" target="0__items__data__1__tradeDate" id="0" />
+    <edge source="0__items__data__1" target="0__items__data__1__nav" id="0" />
+    <edge source="0__items__data__1" target="0__items__data__1__change" id="0" />
+    <edge source="0__items__data__1" target="0__items__data__1__changePercent" id="0" />
+    <edge source="0__items__data__2" target="0__items__data__2__tradeDate" id="0" />
+    <edge source="0__items__data__2" target="0__items__data__2__nav" id="0" />
+    <edge source="0__items__data__2" target="0__items__data__2__change" id="0" />
+    <edge source="0__items__data__2" target="0__items__data__2__changePercent" id="0" />
+    <edge source="0__items__data__3" target="0__items__data__3__tradeDate" id="0" />
+    <edge source="0__items__data__3" target="0__items__data__3__nav" id="0" />
+    <edge source="0__items__data__3" target="0__items__data__3__change" id="0" />
+    <edge source="0__items__data__3" target="0__items__data__3__changePercent" id="0" />
+    <edge source="0__items__data__4" target="0__items__data__4__tradeDate" id="0" />
+    <edge source="0__items__data__4" target="0__items__data__4__nav" id="0" />
+    <edge source="0__items__data__4" target="0__items__data__4__change" id="0" />
+    <edge source="0__items__data__4" target="0__items__data__4__changePercent" id="0" />
+    <edge source="0__items__data__5" target="0__items__data__5__tradeDate" id="0" />
+    <edge source="0__items__data__5" target="0__items__data__5__nav" id="0" />
+    <edge source="0__items__data__5" target="0__items__data__5__change" id="0" />
+    <edge source="0__items__data__5" target="0__items__data__5__changePercent" id="0" />
+    <edge source="0__items__data__6" target="0__items__data__6__tradeDate" id="0" />
+    <edge source="0__items__data__6" target="0__items__data__6__nav" id="0" />
+    <edge source="0__items__data__6" target="0__items__data__6__change" id="0" />
+    <edge source="0__items__data__6" target="0__items__data__6__changePercent" id="0" />
+    <edge source="0__items__data__7" target="0__items__data__7__tradeDate" id="0" />
+    <edge source="0__items__data__7" target="0__items__data__7__nav" id="0" />
+    <edge source="0__items__data__7" target="0__items__data__7__change" id="0" />
+    <edge source="0__items__data__7" target="0__items__data__7__changePercent" id="0" />
+    <edge source="0__items__data__8" target="0__items__data__8__tradeDate" id="0" />
+    <edge source="0__items__data__8" target="0__items__data__8__nav" id="0" />
+    <edge source="0__items__data__8" target="0__items__data__8__change" id="0" />
+    <edge source="0__items__data__8" target="0__items__data__8__changePercent" id="0" />
+    <edge source="0__items__data__9" target="0__items__data__9__tradeDate" id="0" />
+    <edge source="0__items__data__9" target="0__items__data__9__nav" id="0" />
+    <edge source="0__items__data__9" target="0__items__data__9__change" id="0" />
+    <edge source="0__items__data__9" target="0__items__data__9__changePercent" id="0" />
+    <edge source="0__items__data__0__tradeDate" target="0__items__data__0__tradeDate__1730995200" id="0" />
+    <edge source="0__items__data__0__nav" target="0__items__data__0__nav__12.1515" id="0" />
+    <edge source="0__items__data__0__change" target="0__items__data__0__change__0.1281" id="0" />
+    <edge source="0__items__data__0__changePercent" target="0__items__data__0__changePercent__1.06542" id="0" />
+    <edge source="0__items__data__1__tradeDate" target="0__items__data__1__tradeDate__1730908800" id="0" />
+    <edge source="0__items__data__1__nav" target="0__items__data__1__nav__12.0234" id="0" />
+    <edge source="0__items__data__1__change" target="0__items__data__1__change__0.0393" id="0" />
+    <edge source="0__items__data__1__changePercent" target="0__items__data__1__changePercent__0.32793" id="0" />
+    <edge source="0__items__data__2__tradeDate" target="0__items__data__2__tradeDate__1730822400" id="0" />
+    <edge source="0__items__data__2__nav" target="0__items__data__2__nav__11.9841" id="0" />
+    <edge source="0__items__data__2__change" target="0__items__data__2__change__0.0767" id="0" />
+    <edge source="0__items__data__2__changePercent" target="0__items__data__2__changePercent__0.64414" id="0" />
+    <edge source="0__items__data__3__tradeDate" target="0__items__data__3__tradeDate__1730736000" id="0" />
+    <edge source="0__items__data__3__nav" target="0__items__data__3__nav__11.9074" id="0" />
+    <edge source="0__items__data__3__change" target="0__items__data__3__change__0.1454" id="0" />
+    <edge source="0__items__data__3__changePercent" target="0__items__data__3__changePercent__1.23618" id="0" />
+    <edge source="0__items__data__4__tradeDate" target="0__items__data__4__tradeDate__1730390400" id="0" />
+    <edge source="0__items__data__4__nav" target="0__items__data__4__nav__11.762" id="0" />
+    <edge source="0__items__data__4__change" target="0__items__data__4__change__-0.2862" id="0" />
+    <edge source="0__items__data__4__changePercent" target="0__items__data__4__changePercent__-2.37546" id="0" />
+    <edge source="0__items__data__5__tradeDate" target="0__items__data__5__tradeDate__1730304000" id="0" />
+    <edge source="0__items__data__5__nav" target="0__items__data__5__nav__12.0482" id="0" />
+    <edge source="0__items__data__5__change" target="0__items__data__5__change__0.0334" id="0" />
+    <edge source="0__items__data__5__changePercent" target="0__items__data__5__changePercent__0.27799" id="0" />
+    <edge source="0__items__data__6__tradeDate" target="0__items__data__6__tradeDate__1730217600" id="0" />
+    <edge source="0__items__data__6__nav" target="0__items__data__6__nav__12.0148" id="0" />
+    <edge source="0__items__data__6__change" target="0__items__data__6__change__0.0236" id="0" />
+    <edge source="0__items__data__6__changePercent" target="0__items__data__6__changePercent__0.19681" id="0" />
+    <edge source="0__items__data__7__tradeDate" target="0__items__data__7__tradeDate__1730131200" id="0" />
+    <edge source="0__items__data__7__nav" target="0__items__data__7__nav__11.9912" id="0" />
+    <edge source="0__items__data__7__change" target="0__items__data__7__change__0.3277" id="0" />
+    <edge source="0__items__data__7__changePercent" target="0__items__data__7__changePercent__2.80962" id="0" />
+    <edge source="0__items__data__8__tradeDate" target="0__items__data__8__tradeDate__1729785600" id="0" />
+    <edge source="0__items__data__8__nav" target="0__items__data__8__nav__11.6635" id="0" />
+    <edge source="0__items__data__8__change" target="0__items__data__8__change__-0.1768" id="0" />
+    <edge source="0__items__data__8__changePercent" target="0__items__data__8__changePercent__-1.49321" id="0" />
+    <edge source="0__items__data__9__tradeDate" target="0__items__data__9__tradeDate__1729699200" id="0" />
+    <edge source="0__items__data__9__nav" target="0__items__data__9__nav__11.8403" id="0" />
+    <edge source="0__items__data__9__change" target="0__items__data__9__change__0.0049" id="0" />
+    <edge source="0__items__data__9__changePercent" target="0__items__data__9__changePercent__0.0414" id="0" />
   </graph>
 </graphml>

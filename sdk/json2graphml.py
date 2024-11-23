@@ -1,5 +1,16 @@
 """
 TODO:
+
+Script: 
+    - Start Neo4j
+        ```bash
+        docker run -it --rm \
+        --publish=7474:7474 --publish=7687:7687 \
+        --env NEO4J_AUTH=none \
+        --env NEO4J_PLUGINS='["apoc"]' \
+        neo4j:5.25.1
+        ```
+TODO:
 - [ ] Goal : 在 同一個 dictionary 裡面的 keys 要建立橫向連結
     - [ ] 可以讓 List of Diction 裡面的 values 彼此連結
     - [ ] 可以讓 最上層的 values 被綁在一起，類似root的概念
@@ -8,7 +19,7 @@ TODO:
         - [ ] Json裡面的 List 要改成 Dict，並且以 ListItem_0/1/... 為 key!
         - [ ] Cypher 後修：
             - [ ] Step1: Cypher 最後找到所有 ListItem0/1...的節點，
-            - [ ] Step2: 用 Cypher 把其中相同 key 的 values 互相連結
+            - [ ] Step2: 用 Cypher 把其中相同 Key 的 Values 互相連結
             - [ ] Step3: 用 Cypher 移除 ListItem0/1/... ，然後把下面相同的key 合併到一起，往上面接
 - [ ] 納入 root 節點
     - HOW?
@@ -36,8 +47,24 @@ def rm_visual_info(G: nx.Graph) -> nx.Graph:
             del link[key]
     return nx.node_link_graph(node_link_data, edges="edges")
 
+def convert_list_2_dict(json_instance):
+    if isinstance(json_instance, dict):
+        results = dict()
+        for key, value in json_instance.items():
+            results[key] = convert_list_2_dict(value)
+        return results
+    elif isinstance(json_instance, list):
+        results = dict()
+        for i, item in enumerate(json_instance):
+            results[i] = convert_list_2_dict(item)
+        return results
+    else:
+        return json_instance
+
 # Load YAML or JSON data from a file
 data = data_loader.load_yaml_or_json('../examples/cnyes/funds/jsons/nav.json')
+data = convert_list_2_dict(data)
+print(data)
 G = render(data)
 G = rm_visual_info(G)
 buff = io.StringIO()
