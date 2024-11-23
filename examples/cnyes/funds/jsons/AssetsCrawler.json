@@ -1,12 +1,38 @@
-{"items": {
-    "data": [
-        {"id": "cash", "name": "現金", "value": 0.02922}, 
-        {"id": "stock", "name": "股票", "value": 0.97078}, 
-        {"id": "bond", "name": "債券", "value": 0}, 
-        {"id": "other", "name": "其他", "value": 0}
-    ], 
-    "portfolioDate": 1727625600
-    }, 
+{
+    "items": {
+        "data": [
+            {"id": "cash", "name": "現金", "value": 0.02922}, 
+            {"id": "stock", "name": "股票", "value": 0.97078}, 
+            {"id": "bond", "name": "債券", "value": 0}, 
+            {"id": "other", "name": "其他", "value": 0}
+        ], 
+        "portfolioDate": 1727625600
+        }, 
     "message": "成功", 
     "statusCode": 200
 }
+
+"""
+Give me a python function that convert any json into a graph
+with the following node types: 
+
+- AtomicElement:
+    - Number
+    - String
+    - Boolean
+- Object:
+    - List
+    - Record
+- Field
+
+, and follwing link types:
+
+- (List) -> has_element -> (AtomicElement/List/Records)
+- (Record) -> has_field -> (Field)
+- (Field) -> has_value -> (AtomicElement/List/Records)
+
+The function should return nodes as list of dictionary and links as 
+lit of dictionary. 
+
+The nodes should have id, content, type as the field of dictionary, so as for the links.
+"""

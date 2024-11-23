@@ -1,0 +1,21 @@
+CREATE (n:Element {id: '1', tag: 'html'});
+CREATE (n:Element {id: '2', tag: 'head'});
+CREATE (n:Element {id: '3', tag: 'title'});
+CREATE (n:Text {id: '4', content: 'Example Domain'});
+CREATE (n:Element {id: '5', tag: 'body'});
+CREATE (n:Element {id: '6', tag: 'h1'});
+CREATE (n:Text {id: '7', content: 'Example Domain'});
+CREATE (n:Element {id: '8', tag: 'p'});
+CREATE (n:Text {id: '9', content: 'This domain is for use in illustrative examples in documents.'});
+CREATE (n:Element {id: '10', tag: 'p'});
+CREATE (n:Text {id: '11', content: 'More information...'});
+MATCH (a {id: '1'}), (b {id: '2'}) CREATE (a)-[:CONTAINS]->(b);
+MATCH (a {id: '2'}), (b {id: '3'}) CREATE (a)-[:CONTAINS]->(b);
+MATCH (a {id: '3'}), (b {id: '4'}) CREATE (a)-[:CONTAINS]->(b);
+MATCH (a {id: '1'}), (b {id: '5'}) CREATE (a)-[:CONTAINS]->(b);
+MATCH (a {id: '5'}), (b {id: '6'}) CREATE (a)-[:CONTAINS]->(b);
+MATCH (a {id: '6'}), (b {id: '7'}) CREATE (a)-[:CONTAINS]->(b);
+MATCH (a {id: '5'}), (b {id: '8'}) CREATE (a)-[:CONTAINS]->(b);
+MATCH (a {id: '8'}), (b {id: '9'}) CREATE (a)-[:CONTAINS]->(b);
+MATCH (a {id: '5'}), (b {id: '10'}) CREATE (a)-[:CONTAINS]->(b);
+MATCH (a {id: '10'}), (b {id: '11'}) CREATE (a)-[:CONTAINS]->(b)
