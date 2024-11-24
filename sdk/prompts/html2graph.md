@@ -27,7 +27,8 @@ Represents the parent-child relationship in the HTML document structure.
 has_attribute:
 Used to link an Element to its Attribute.
 Represents the relationship between an HTML tag and its attributes.
-
+is_in_front_of:
+Used to link an Element to its next Element for Elements in a sequence.
 The function should return nodes as list of dictionary and links as list of dictionary. 
 
 Note that the nodes should have unique id as node id, so  for the links.
