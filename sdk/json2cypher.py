@@ -228,9 +228,10 @@ def get_link_constraint_cyphers():
 
 # Example usage
 if __name__ == "__main__":
-    sample_json = json.load(open('../examples/cnyes/funds/jsons/RegionCrawler.json', 'r'))
+    # sample_json = json.load(open('../examples/cnyes/funds/jsons/RegionCrawler.json', 'r'))
     # sample_json = json.load(open('pypi.json', 'r')) NOTE: too complex
     # sample_json = json.load(open('html.json', 'r')) NOTE: entire html too complex
+    sample_json = json.load(open('endpoint_records.json', 'r'))
     nodes, links = json_to_graph(sample_json)
     conn = Neo4jIngestor("neo4j://localhost:7687", "neo4j", "neo4j")
     try:
