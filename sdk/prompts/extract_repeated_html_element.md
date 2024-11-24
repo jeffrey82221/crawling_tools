@@ -132,30 +132,13 @@ MATCH
   (child3)-[:HAS_ATTRIBUTE]->(attr3),
   (parent:Element)-[:CONTAINS]->(e1),
   (parent:Element)-[:CONTAINS]->(e2),
-  (parent:Element)-[:CONTAINS]->(e3),
-  path=(root:Element)-[:CONTAINS*]->(parent:Element)
+  (parent:Element)-[:CONTAINS]->(e3)
 WHERE 
   e1.tag = e2.tag AND e2.tag = e3.tag AND
   child1.tag = child2.tag AND child2.tag = child3.tag AND
   attr1.name = attr2.name AND attr2.name = attr3.name
-RETURN 
-  path
+WITH parent
+MATCH path=(root:Element)-[:CONTAINS*]->(parent:Element)
+SET parent:Highlighted
+RETURN path
 ```
-
-
-```
-MATCH 
-  path=(root:Element)-[:CONTAINS*]->(parent:Element)-[:contains]->(e1:Element)-[:contains]->(child1),
-  (e1)-[:is_in_front_of]->(e2:Element)-[:contains]->(child2),
-  (e2)-[:is_in_front_of]->(e3:Element)-[:contains]->(child3),
-  (child1)-[:has_attribute]->(attr1),
-  (child2)-[:has_attribute]->(attr2),
-  (child3)-[:has_attribute]->(attr3)
-WHERE 
-  e1.tag = e2.tag AND e2.tag = e3.tag AND
-  child1.tag = child2.tag AND child2.tag = child3.tag AND
-  attr1.name = attr2.name AND attr2.name = attr3.name AND
-  attr1.value = attr2.value AND attr2.value = attr3.value
-RETURN 
-  path
-  ```
