@@ -1,1 +1,14 @@
-{"items": {"data": [{"name": "日本", "id": "Japan", "value": 100}], "portfolioDate": 1727625600}, "message": "成功", "statusCode": 200}
+{
+    "items": {
+        "data": [
+            {
+                "name": "日本",
+                "id": "Japan",
+                "value": 100
+            }
+        ],
+        "portfolioDate": 1727625600
+    },
+    "message": "成功",
+    "statusCode": 200
+}

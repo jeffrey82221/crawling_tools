@@ -5,11 +5,9 @@ into graph
 
 # Steps: 
 
-# Step 1: define the nodes and links of the format
 
 
-
-# Step 2: ask POE to generate a function to develop a function for generating the nodes and links: 
+# Ask POE to generate a function to develop a function for generating the nodes and links: 
 
 Give me a python function that convert any json into a graph
 with the following node types: 
@@ -25,7 +23,7 @@ Field
 (List) -> has_element -> (AtomicElement/List/Records)
 (Record) -> has_field -> (Field)
 (Field) -> has_value -> (AtomicElement/List/Records)
-
+(List Element) -> is_in_front_of -> (List Element)
 
 
 The function should return nodes as list of dictionary and links as 

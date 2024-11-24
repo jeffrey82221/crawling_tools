@@ -8,6 +8,8 @@ Developed by prompt: https://poe.com/s/iGsAR5d8qzsI6DATAqMd
 
 import json
 import uuid
+import tqdm
+from neo4j import GraphDatabase
 
 def json_to_graph(json_data):
     """
@@ -72,9 +74,15 @@ def json_to_graph(json_data):
                 links.append(create_link(parent_id, node_id, link_type))
 
             # Process each element in the list
+            item_ids = []
             for item in element:
-                process_element(item, parent_id=node_id, link_type="has_element")
+                item_id = process_element(item, parent_id=node_id, link_type="has_element")
+                item_ids.append(item_id)
 
+            # Connect List element one after another
+            for i, item_id in enumerate(item_ids):
+                if i > 0:
+                    links.append(create_link(item_ids[i-1], item_id, 'is_in_front_of'))
             return node_id
 
         elif isinstance(element, dict):
@@ -110,7 +118,7 @@ def json_to_graph(json_data):
 
     return nodes, links
 
-def convert_to_cypher(nodes, links):
+def convert_to_cyphers(nodes, links):
     """
     Converts nodes and links into Cypher queries for Neo4j.
 
@@ -137,12 +145,33 @@ def convert_to_cypher(nodes, links):
         cypher_queries.append(link_query)
 
     # Combine all queries into one script
-    return "\n".join(cypher_queries)
+    return cypher_queries
 
+class Neo4jConnection:
+    def __init__(self, uri, user, password):
+        self.driver = GraphDatabase.driver(uri, auth=(user, password))
+
+    def close(self):
+        self.driver.close()
+
+    def execute_query(self, query):
+        with self.driver.session() as session:
+            session.write_transaction(self._execute_single_query, query)
+
+    @staticmethod
+    def _execute_single_query(tx, query):
+        result = tx.run(query)
+        return result.data()
+    
 # Example usage
 if __name__ == "__main__":
-    sample_json = json.load(open('../examples/cnyes/funds/jsons/nav.json', 'r'))
+    sample_json = json.load(open('../examples/cnyes/funds/jsons/RegionCrawler.json', 'r'))
     nodes, links = json_to_graph(sample_json)
-    cypher = convert_to_cypher(nodes, links)
-    with open('json.cypher', 'w') as f:
-        f.write(cypher)
+    conn = Neo4jConnection("neo4j://localhost:7687", "neo4j", "neo4j")
+    cyphers = convert_to_cyphers(nodes, links)
+    for query in tqdm.tqdm(cyphers, desc='cyphers'):
+        try:
+            conn.execute_query(query)
+        finally:
+            conn.close()
+    
