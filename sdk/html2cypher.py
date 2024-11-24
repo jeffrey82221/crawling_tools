@@ -1,3 +1,13 @@
+"""
+TODO:
+- [ ] Identify repeating part of the HTML
+    - [ ] Add beautifulsoup element object into `nodes` dictionary. 
+    - [ ] Avoid adding beautifulsoup element object into cypher. 
+    - [ ] Using neo4j to find the id of the repeating component.
+    - [ ] Store the repeating component part of HTML for further processing.
+    - [ ] Develop algorithm to find difference between similar element in the list
+        See: diff_extractor.py
+"""
 from bs4 import BeautifulSoup
 import uuid
 import requests
