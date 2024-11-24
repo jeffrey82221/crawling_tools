@@ -9,7 +9,9 @@ Developed by prompt: https://poe.com/s/iGsAR5d8qzsI6DATAqMd
 import json
 import uuid
 import tqdm
+import threading
 from neo4j import GraphDatabase
+from neo4j.exceptions import CypherSyntaxError
 
 def json_to_graph(json_data):
     """
@@ -118,60 +120,128 @@ def json_to_graph(json_data):
 
     return nodes, links
 
-def convert_to_cyphers(nodes, links):
+def node_to_cypher(node, ignore_text_content=False) -> str:
     """
-    Converts nodes and links into Cypher queries for Neo4j.
-
     Parameters:
-        nodes (list): A list of nodes, where each node is a dictionary with keys 'id', 'content', and 'type'.
-        links (list): A list of links, where each link is a dictionary with keys 'id', 'source', 'target', and 'type'.
-
-    Returns:
-        str: A Cypher query string to create the nodes and links in Neo4j.
+        - node is a dictionary with keys 'id', 'content', and 'type'.
     """
-    cypher_queries = []
-
-    # Create nodes
-    for node in nodes:
+    if ignore_text_content:
+        content = '[CANNOT ATTACH TO CYPHER]'
+        node_query = f"CREATE (:{node['type']} {{id: '{node['id']}', content: '{content}', type: '{node['type']}'}});"
+    else:
         node_query = f"CREATE (:{node['type']} {{id: '{node['id']}', content: '{node['content']}', type: '{node['type']}'}});"
-        cypher_queries.append(node_query)
+    return  node_query
 
-    # Create links
-    for link in links:
-        link_query = (
+def link_to_cypher(link) -> str:
+    """
+    Parameters:
+        - link is a dictionary with keys 'id', 'source', 'target', and 'type'.
+    """
+    link_query = (
             f"MATCH (a {{id: '{link['source']}'}}), (b {{id: '{link['target']}'}}) "
             f"CREATE (a)-[:{link['type']} {{id: '{link['id']}'}}]->(b);"
         )
-        cypher_queries.append(link_query)
+    return link_query
 
-    # Combine all queries into one script
-    return cypher_queries
+def split_list_into_n_parts(lst, n):
+    """
+    Splits a list into n sublists as evenly as possible.
+    
+    Args:
+    lst (list): The list to be split.
+    n (int): The number of sublists to create.
+    
+    Returns:
+    list of lists: A list containing n sublists.
+    """
+    # If n is larger than the list length, we can only return actual list elements
+    if n > len(lst):
+        return [lst[i:i + 1] for i in range(len(lst))] + [[] for _ in range(n - len(lst))]
 
-class Neo4jConnection:
+    # Calculate the size of each part: the minimum size of sublists
+    part_size, remainder = divmod(len(lst), n)
+
+    # Create the sublists
+    sublists = []
+    start = 0
+    for i in range(n):
+        # Add an extra element to some sublists to distribute the remainder
+        end = start + part_size + (1 if i < remainder else 0)
+        sublists.append(lst[start:end])
+        start = end
+
+    return sublists
+
+class Neo4jIngestor:
     def __init__(self, uri, user, password):
         self.driver = GraphDatabase.driver(uri, auth=(user, password))
 
     def close(self):
         self.driver.close()
 
-    def execute_query(self, query):
-        with self.driver.session() as session:
-            session.write_transaction(self._execute_single_query, query)
+    def ingest(self, items, callback_func, desc='', n_thread=1):
+        if n_thread == 1:
+            args = self.driver, items, callback_func, desc
+            t1 = threading.Thread(target=Neo4jIngestor._ingest_single_thread, args=args)
+            t1.setDaemon(True)
+            t1.start()
+            t1.join()
+        else:
+            threads = []
+            for i, items_part in enumerate(split_list_into_n_parts(items, n_thread)):
+                args = self.driver, items_part, callback_func, desc + '.' + str(i)
+                t1 = threading.Thread(target=Neo4jIngestor._ingest_single_thread, args=args)
+                t1.setDaemon(True)
+                threads.append(t1)
+                t1.start()
+            for t1 in threads:
+                t1.join()
+        
+    def _ingest_single_thread(*args):
+        driver, items, callback_func, desc = args
+        with driver.session(database="neo4j") as session:
+            for item in tqdm.tqdm(items, desc=desc):
+                try:
+                    query = callback_func(item)
+                    session.run(query)
+                except CypherSyntaxError:
+                    query = callback_func(item, ignore_text_content=True)
+                    session.run(query)
 
-    @staticmethod
-    def _execute_single_query(tx, query):
-        result = tx.run(query)
-        return result.data()
+node_types = ['Field', 'List', 'Number', 'Record', 'String']
+link_types = ['has_element', 'has_field', 'has_value', 'is_in_front_of']
+
+
+def get_node_constraint_cyphers():
+    cyphers = []
+    for node_type in node_types:
+        cyphers.append()
+    return cyphers
+
+def get_link_constraint_cyphers():
+    cyphers = []
+    for link_type in link_types:
+        cyphers.append(f'CREATE CONSTRAINT unique_id_for_{link_type.lower()} FOR ()-[n:{link_type})-() REQUIRE n.id IS UNIQUE;')
+    return cyphers
     
+
+
 # Example usage
 if __name__ == "__main__":
-    sample_json = json.load(open('../examples/cnyes/funds/jsons/RegionCrawler.json', 'r'))
+    # sample_json = json.load(open('../examples/cnyes/funds/jsons/RegionCrawler.json', 'r'))
+    sample_json = json.load(open('pypi.json', 'r'))
     nodes, links = json_to_graph(sample_json)
-    conn = Neo4jConnection("neo4j://localhost:7687", "neo4j", "neo4j")
-    cyphers = convert_to_cyphers(nodes, links)
-    for query in tqdm.tqdm(cyphers, desc='cyphers'):
-        try:
-            conn.execute_query(query)
-        finally:
-            conn.close()
-    
+    conn = Neo4jIngestor("neo4j://localhost:7687", "neo4j", "neo4j")
+    try:
+        conn.ingest(node_types, 
+                    lambda node_type: f'CREATE CONSTRAINT unique_id_for_{node_type.lower()} FOR (n:{node_type}) REQUIRE n.id IS UNIQUE;', 
+                    desc='node_constraint'
+        )
+        conn.ingest(link_types, 
+                    lambda link_type: f'CREATE CONSTRAINT unique_id_for_{link_type.lower()} FOR ()-[n:{link_type}]-() REQUIRE n.id IS UNIQUE;', 
+                    desc='link_constraint'
+        )
+        conn.ingest(nodes, node_to_cypher, desc='nodes', n_thread=16)
+        conn.ingest(links, link_to_cypher, desc='links', n_thread=16)
+    finally:
+        conn.close()

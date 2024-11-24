@@ -4,6 +4,7 @@ import requests
 from neo4j import GraphDatabase
 from neo4j.exceptions import CypherSyntaxError
 import tqdm
+import threading
 
 def html_to_graph(html_content):
     """
@@ -166,22 +167,71 @@ def link_to_cypher(link) -> str:
     return query
 
 
-class Neo4jConnection:
+def split_list_into_n_parts(lst, n):
+    """
+    Splits a list into n sublists as evenly as possible.
+    
+    Args:
+    lst (list): The list to be split.
+    n (int): The number of sublists to create.
+    
+    Returns:
+    list of lists: A list containing n sublists.
+    """
+    # If n is larger than the list length, we can only return actual list elements
+    if n > len(lst):
+        return [lst[i:i + 1] for i in range(len(lst))] + [[] for _ in range(n - len(lst))]
+
+    # Calculate the size of each part: the minimum size of sublists
+    part_size, remainder = divmod(len(lst), n)
+
+    # Create the sublists
+    sublists = []
+    start = 0
+    for i in range(n):
+        # Add an extra element to some sublists to distribute the remainder
+        end = start + part_size + (1 if i < remainder else 0)
+        sublists.append(lst[start:end])
+        start = end
+
+    return sublists
+
+class Neo4jIngestor:
     def __init__(self, uri, user, password):
         self.driver = GraphDatabase.driver(uri, auth=(user, password))
 
     def close(self):
         self.driver.close()
 
-    def execute_query(self, query):
-        with self.driver.session() as session:
-            session.write_transaction(self._execute_single_query, query)
-
-    @staticmethod
-    def _execute_single_query(tx, query):
-        result = tx.run(query)
-        return result.data()
-    
+    def ingest(self, items, callback_func, desc='', n_thread=1):
+        if n_thread == 1:
+            args = self.driver, items, callback_func, desc
+            t1 = threading.Thread(target=Neo4jIngestor._ingest_single_thread, args=args)
+            t1.setDaemon(True)
+            t1.start()
+            t1.join()
+        else:
+            threads = []
+            for i, items_part in enumerate(split_list_into_n_parts(items, n_thread)):
+                args = self.driver, items_part, callback_func, desc + '.' + str(i)
+                t1 = threading.Thread(target=Neo4jIngestor._ingest_single_thread, args=args)
+                t1.setDaemon(True)
+                threads.append(t1)
+                t1.start()
+            for t1 in threads:
+                t1.join()
+        
+    def _ingest_single_thread(*args):
+        driver, items, callback_func, desc = args
+        with driver.session(database="neo4j") as session:
+            for item in tqdm.tqdm(items, desc=desc):
+                try:
+                    query = callback_func(item)
+                    session.run(query)
+                except CypherSyntaxError:
+                    query = callback_func(item, ignore_text_content=True)
+                    session.run(query)
+        
 # Example Usage
 if __name__ == "__main__":
     # Example HTML content
@@ -191,21 +241,9 @@ if __name__ == "__main__":
     with open('example.html', 'w') as f:
         f.write(html_content)
     nodes, links = html_to_graph(html_content)
-    conn = Neo4jConnection("neo4j://localhost:7687", "neo4j", "neo4j")
-    for node in tqdm.tqdm(nodes, desc='nodes'):
-        query = node_to_cypher(node)
-        try:
-            conn.execute_query(query)
-        except CypherSyntaxError:
-            query = node_to_cypher(node, ignore_text_content=True)
-            conn.execute_query(query)
-        finally:
-            conn.close()
-
-    for link in tqdm.tqdm(links, desc='links'):
-        query = link_to_cypher(link)
-        try:
-            conn.execute_query(query)
-        finally:
-            conn.close()
-    
+    conn = Neo4jIngestor("neo4j://localhost:7687", "neo4j", "neo4j")
+    try:
+        conn.ingest(nodes, node_to_cypher, desc='nodes', n_thread=8)
+        conn.ingest(links, link_to_cypher, desc='links', n_thread=8)
+    finally:
+        conn.close()
