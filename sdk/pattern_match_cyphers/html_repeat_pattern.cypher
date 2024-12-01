@@ -13,7 +13,7 @@ MATCH
 WHERE 
   e1.tag = e2.tag AND e2.tag = e3.tag AND
   child1.tag = child2.tag AND child2.tag = child3.tag AND
-  attr1.name = attr2.name AND attr2.name = attr3.name
+  attr1.value = attr2.value AND attr2.value = attr3.value
 WITH parent
 MATCH path=(root:Element)-[:CONTAINS*]->(parent:Element)
 SET parent:Highlighted

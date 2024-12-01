@@ -16,6 +16,7 @@ from neo4j.exceptions import CypherSyntaxError
 import tqdm
 import threading
 
+
 def html_to_graph(html_content):
     """
     Converts an HTML document into a graph representation using the specified Node Types and Link Types.
@@ -80,7 +81,7 @@ def html_to_graph(html_content):
                 attr_id = get_unique_node_id()
                 nodes.append({
                     "id": attr_id,
-                    "name": attr_name,
+                    "name": attr_name.strip().replace('-', '_'),
                     "value": attr_value,
                     "type": "Attribute"
                 })
@@ -157,7 +158,7 @@ def node_to_cypher(node, ignore_text_content=False) -> str:
     elif node["type"] == "Attribute":
         value = node.get('value', '')
         value_str = f'"{value}"'
-        query = f"CREATE (n:Attribute {{id: '{node['id']}', name: '{node.get('name', '')}', value: {value_str}}})"
+        query = f"CREATE (n:Attribute:{node.get('name', '')} {{id: '{node['id']}', value: {value_str}}})"
 
     elif node["type"] == "Text":
         if ignore_text_content:
