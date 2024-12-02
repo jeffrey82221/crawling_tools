@@ -20,6 +20,37 @@ import uuid
 import os
 from urllib.parse import urlparse
 import ssl
+from html.parser import HTMLParser
+
+
+class ConfirmHTMLParser(HTMLParser):
+    def __init__(self):
+        super().__init__()
+        self.start_tags = list()
+        self.end_tags = list()
+        self.attributes = list()
+    
+    def is_text_html(self):
+        return len(self.start_tags) == len(self.end_tags)
+
+    def handle_starttag(self, tag, attrs):
+        self.start_tags.append(tag)
+        self.attributes.append(attrs)
+
+    def handle_endtag(self, tag):
+        self.end_tags.append(tag)
+
+    def handle_data(self, data):
+        pass
+
+def has_head_n_body(html_content):
+    soup = BeautifulSoup(html_content, 'html.parser')
+    
+    # Check for <head> and <body> tags
+    has_head = soup.head is not None
+    has_body = soup.body is not None
+
+    return has_head and has_body
 
 
 def get_webpage_records(url: str) -> List[Dict]:
@@ -79,8 +110,11 @@ def collect_response_body(records: List[Dict]) -> Tuple[List[Dict], List[Dict]]:
                 data_type = 'json'
             except JSONDecodeError as e:
                 data = res.content
-                if bool(BeautifulSoup(res.content, "xml").find()):
-                    data_type = 'has_html'
+                text = res.text
+                parser = ConfirmHTMLParser()
+                parser.feed(text)
+                if parser.is_text_html() and has_head_n_body(text):
+                    data_type = 'html'
                 else:
                     data_type = None
             except BaseException as e:
@@ -90,7 +124,7 @@ def collect_response_body(records: List[Dict]) -> Tuple[List[Dict], List[Dict]]:
             print(f"ENDPOINT No.{i} {data_type} {res.status_code} {method} from {url}")
         except (ssl.SSLCertVerificationError, requests.exceptions.SSLError, requests.exceptions.ConnectionError, requests.exceptions.ReadTimeout) as e:
             data = str(e)
-            data_type = 'unknown'
+            data_type = None
             print(f"ENDPOINT No.{i} {data_type} ssl error {method} from {url}")
         finally:
             records[i]['response']['data'] = data
@@ -421,7 +455,7 @@ def has_extension2cypher(x):
     return cypher
 
 def response_type2cypher(x):
-    if x["data_type"] and not x["data_type"].startswith('has'):
+    if x["data_type"]:
         data_type_label = x['data_type'].upper()
         cypher = f'''
         CREATE (r:ResponseType {{id: "{data_type_label}"}});
@@ -479,7 +513,7 @@ if __name__ == '__main__':
                     , desc='domain_endpoint_links', n_thread=n_thread)
         html_endpoint_links = []
         for endpoint_node in endpoint_nodes:
-            if endpoint_node['data_type'] == 'has_html':
+            if endpoint_node['data_type'] == 'html':
                 top_ids, html_nodes, html_links = html_to_graph(endpoint_node['data'])
                 print(f'#html node: {len(html_nodes)} & #html link: {len(html_links)}')
                 conn.ingest(html_nodes, html_node_to_cypher, desc='nodes', n_thread=n_thread)
@@ -496,5 +530,3 @@ if __name__ == '__main__':
             , desc='has_html_link', n_thread=n_thread)
     finally:
         conn.close()
-
-    
